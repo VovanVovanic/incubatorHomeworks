@@ -1,7 +1,7 @@
 import React from "react";
 import { MessageDateType } from "./HW1";
 import classes from "./Message.module.css";
-console.log(classes);
+
 
 function Message(props: MessageDateType) {
   const { avatar, name, message, time } = props;

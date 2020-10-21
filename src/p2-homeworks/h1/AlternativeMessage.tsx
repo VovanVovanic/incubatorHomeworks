@@ -1,4 +1,5 @@
 import React from "react";
+import { parseIsolatedEntityName } from "typescript";
 import { AlternativeMessageType } from "./HW1";
 import classes from "./Message.module.css";
 
@@ -29,5 +30,6 @@ function AlternativeMessage(props: AlternativeMessageType) {
     </div>
   );
 }
+
 
 export default AlternativeMessage;

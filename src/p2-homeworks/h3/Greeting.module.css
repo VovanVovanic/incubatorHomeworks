@@ -1,7 +1,105 @@
 .someClass {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 1200px;
+    background-color: #17f9f2;
+    background-image: linear-gradient(315deg, #17f9f2 0%, #b0f9a9 74%);
+    margin-bottom: 60px;
+}
+.wrapper{
+    box-sizing: border-box;
+    width: 900px;
+    height: 60px;
+    padding: 10px;
+    border: 2px solid lightskyblue;
+    border-radius: 4px;
+    margin: 30px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.wrapper input, button, span{
+    height: 30px;
+}
+.wrapper input{
+    padding-left: 30px;
+    width: 70%;
+    outline: none;
+    border: none;
+    background-color: #aee1f9;
+    background-image: linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+
+}
+.wrapper button{
+    width: auto;
+    background-color: #f8ef42;
+    background-image: linear-gradient(315deg, #f8ef42 0%, #0fd64f 74%);
+    border: none;
+    border-radius: 2px;
+    color: blue;
+    text-transform: uppercase;
+}
+.wrapper span{
+    line-height: 28px;
+}
+.error {
+    border: 1px solid red;
+}
+.errorBox{
+    display: block;
+    text-align: center;
+    width: 900px;
+    background-color: #fc9842;
+    background-image: linear-gradient(315deg, #fc9842 0%, #fe5f75 74%);
+}
+.listWrapper {
+    display: flex;
+
+}
+.listWrapper ul {
+    flex-direction: column;
+    padding: 10px;
+    width: 300px;
+    list-style: none;
 
 }
 
-.error {
-    border: 1px solid red;
+.listWrapper ul li button {
+        margin-bottom: 10px;
+        height: 30px;
+        background-color: #f9ea8f;
+        background-image: linear-gradient(315deg, #f9ea8f 0%, #aff1da 74%);
+        width: 70%;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 5px;
+        border: none;
+        line-height: 28px;
+        text-transform: uppercase;
+        font-weight: bold;
+        
+}
+.listWrapper ul li button:active{
+box-shadow: inset 2px 3px 4px rgba(0, 0, 0, .3);
+}
+h4{
+    text-align: center;
+}
+.userInfo{
+    padding: 40px;
+    width: 500px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: #8ae9b3;
+    background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
+}
+.name{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 22px;
 }

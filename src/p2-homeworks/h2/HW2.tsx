@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useState } from "react";
 import Affairs from "./Affairs";
 import AlternativeAffairs from './AlternativeAffairs'
 import classes from './Affairs.module.css'
@@ -42,7 +42,8 @@ export const filterAffairs = (affairs: Array<AffairType>,filter: FilterType): Ar
 };
 export const deleteAffair = (affairs: Array<AffairType>,_id: number): Array<AffairType> => {
     // need to fix any
-    return affairs.filter((el) => el._id !== _id)
+  return affairs.filter((el) => el._id !== _id)
+  
     // need to fix
 };
 

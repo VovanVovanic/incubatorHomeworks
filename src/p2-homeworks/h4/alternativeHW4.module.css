@@ -1,0 +1,19 @@
+.wrapper{
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+h2{
+  width: 100%;
+  color: wheat;
+  text-align: center;
+}
+.common{
+  padding: 40px;
+  margin: 0 auto;
+  width: 1600px;
+  height: 100vh;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 74%);
+  }

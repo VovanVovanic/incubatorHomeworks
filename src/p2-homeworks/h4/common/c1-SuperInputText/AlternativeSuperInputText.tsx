@@ -1,8 +1,36 @@
-import React from "react";
+import classes from "./myInput.module.css";
+import React, { ChangeEvent, useState } from "react";
 
-function AlternativeSuperInputText() {
+
+
+type InputPropsType = {
+  simonSaid: string;
+    onTextEnter: (value: string) => void
+  onAddTask: ()=>void
+};
+function AlternativeSuperInputText({ simonSaid, onTextEnter, onAddTask}: InputPropsType) {
+    const onTextChange = (e: ChangeEvent<HTMLInputElement>) => {
+      onTextEnter(e.currentTarget.value);
+    };
+  
+    const keyDownHandler = (e: React.KeyboardEvent<HTMLInputElement>) => {
+        if (e.key === 'Escape') {
+            onTextEnter('')
+        }
+        if (e.key === 'Enter') {
+          onAddTask()
+        }
+    };
+  
     return (
-        <input/>
+      <input
+        className={classes.myInput}
+        placeholder="Саймон говорит ..."
+        value={simonSaid}
+        onChange={onTextChange}
+        onKeyDown={keyDownHandler}
+        onFocus={(e) => onTextEnter("")}
+      />
     );
 }
 

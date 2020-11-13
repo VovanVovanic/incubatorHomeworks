@@ -1,0 +1,9 @@
+.taskList{
+  margin-top: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border: 3px solid goldenrod;
+  border-radius: 10px;
+  list-style: none;
+}

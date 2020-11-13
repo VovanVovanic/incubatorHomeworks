@@ -1,8 +1,18 @@
+import classes from "./myButton.module.css";
 import React from "react";
 
-function AlternativeSuperButton() {
+
+type ButtonPropsType = {
+    label: string
+    onButtonAction: () => void
+    
+}
+function AlternativeSuperButton({label, onButtonAction}:ButtonPropsType) {
     return (
-        <button/>
+        <button
+            className={classes.myButton}
+            onClick={onButtonAction}
+        >{label}</button>
     );
 }
 

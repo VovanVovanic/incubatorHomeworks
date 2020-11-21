@@ -2,6 +2,7 @@
   "name": "simple-react-homeworks",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://VovanVovanic.github.io/incubatorHomeworks",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -22,13 +23,16 @@
     "react-scripts": "^3.4.3",
     "react-transition-group": "^4.4.1",
     "typescript": "~3.7.2",
-    "uuid": "^8.3.1"
+    "uuid": "^8.3.1",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"

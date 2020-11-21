@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/incubatorHomeworks/static/css/main.d19e8211.chunk.css",
+    "main.js": "/incubatorHomeworks/static/js/main.67bce877.chunk.js",
+    "main.js.map": "/incubatorHomeworks/static/js/main.67bce877.chunk.js.map",
+    "runtime-main.js": "/incubatorHomeworks/static/js/runtime-main.81915009.js",
+    "runtime-main.js.map": "/incubatorHomeworks/static/js/runtime-main.81915009.js.map",
+    "static/js/2.978613be.chunk.js": "/incubatorHomeworks/static/js/2.978613be.chunk.js",
+    "static/js/2.978613be.chunk.js.map": "/incubatorHomeworks/static/js/2.978613be.chunk.js.map",
+    "index.html": "/incubatorHomeworks/index.html",
+    "precache-manifest.61847acac5739831fc4a6d9244e4730d.js": "/incubatorHomeworks/precache-manifest.61847acac5739831fc4a6d9244e4730d.js",
+    "service-worker.js": "/incubatorHomeworks/service-worker.js",
+    "static/css/main.d19e8211.chunk.css.map": "/incubatorHomeworks/static/css/main.d19e8211.chunk.css.map",
+    "static/js/2.978613be.chunk.js.LICENSE.txt": "/incubatorHomeworks/static/js/2.978613be.chunk.js.LICENSE.txt",
+    "static/media/Simon.module.css": "/incubatorHomeworks/static/media/simon.7b3cd18c.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81915009.js",
+    "static/js/2.978613be.chunk.js",
+    "static/css/main.d19e8211.chunk.css",
+    "static/js/main.67bce877.chunk.js"
+  ]
+}

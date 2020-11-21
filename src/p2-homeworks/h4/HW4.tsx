@@ -8,7 +8,7 @@ import Simon from "./common/Simon/Simon";
 import Content from "./common/Content/content";
 import { v1 } from "uuid";
 import { loremIpsum } from "lorem-ipsum";
-import { versionMajorMinor } from "typescript";
+
 
 
 export type taskType = {
@@ -127,9 +127,7 @@ function HW4() {
     setSimonSaid("");
   }
   return (
-    <div>
-      <hr />
-        homeworks 4
+    <div className={classes.Wrapper}>
       <div className={s.column}>
         {/*should work (должно работать)*/}
         <SuperInputText
@@ -188,3 +186,4 @@ function HW4() {
 
 export default HW4;
 // str.replace(/г\.[\s\S]*/g, '')
+

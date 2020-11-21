@@ -56,7 +56,7 @@ function HW2() {
 
    
   return (
-    <>
+    <div className={classes.Wrapper}>
       <div className={classes.someClass}>
         <h1>Homework 2</h1>
         {/*should work (должно работать)*/}
@@ -71,7 +71,7 @@ function HW2() {
         <h2>Game Of Thrones Books</h2>
         <AlternativeAffairs />
       </div>
-    </>
+    </div>
   );
 }
 

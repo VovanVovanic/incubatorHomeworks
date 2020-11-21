@@ -1,0 +1,54 @@
+.Wrapper{
+  display: flex;
+  height: 82%;
+  background-color: #f3f4f7;
+  background-image: linear-gradient(315deg, #f3f4f7 0%, #caccd1 74%);
+}
+.TaskWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  overflow: scroll;
+}
+.hello{
+  color:green;
+}
+
+.page { animation: anim 1000ms ease-out forwards;}
+
+
+.page-enter {
+  opacity: 0
+}
+
+.page-enter-active {
+opacity: 1;
+transition: opacity 1s;
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+opacity: 0;
+transition: opacity 1s;
+}
+.page-exit-done{
+  opacity: 0;
+}
+@keyframes anim {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  50%{
+    opacity: 1;
+    transform: translateX(50px);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}

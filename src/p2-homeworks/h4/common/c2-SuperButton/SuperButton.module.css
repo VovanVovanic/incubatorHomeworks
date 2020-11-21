@@ -16,6 +16,8 @@
     font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 20px;
+    line-height: 8px;
+
 }
 
 .red:before {

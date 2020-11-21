@@ -1,11 +1,12 @@
+import classes from "./Error.module.css";
 import React from "react";
 
 function Error404() {
     return (
-        <div>
-            <div>404</div>
-            <div>Page not found!</div>
-            <div>—ฅ/ᐠ.̫ .ᐟ\ฅ—</div>
+        <div className={classes.Error}>
+            
+            <div className={classes.ErrorMessage}>404 Page not found!</div>
+            
         </div>
     );
 }

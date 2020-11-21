@@ -1,0 +1,21 @@
+.Error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  color:rgb(44, 18, 23);
+  height: 100vh;
+}
+.ErrorMessage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 200px;
+  border: 5px solid red;
+  border-radius: 15px;
+  text-align: center;
+  color: crimson;
+  font-size: 34px;
+  font-weight: bold;
+}

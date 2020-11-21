@@ -1,29 +1,95 @@
+import classes from "./routes.module.css";
 import React from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
+import HW1 from "../h1/HW1";
+import HW2 from "../h2/HW2";
+import HW3 from "../h3/HW3";
+import HW4 from "../h4/HW4";
+import Error404 from "./pages/Error404";
+import Junior from "./pages/Junior";
+import JuniorPlus from "./pages/JuniorPlus";
+import PreJunior from "./pages/PreJunior";
+import TaskNav from "./pages/TaskNav";
+import { CSSTransition} from "react-transition-group";
 
 export const PATH = {
-    PRE_JUNIOR: "/pre-junior",
-    // add paths
-}
+  PRE_JUNIOR: "/pre-junior",
+  JUNIOR: "/junior",
+  JUNIOR_PLUS: "/junior-plus",
+  HW1: "/hw1",
+  HW2: "/hw2",
+  HW3: "/hw3",
+  HW4: "/hw4",
+  // add paths
+};
+
+
+const animatedRoutes = [
+  { path: "/pre-junior/hw1", Component: HW1 },
+  { path: "/pre-junior/hw2", Component: HW2 },
+  { path: "/pre-junior/hw3", Component: HW3 },
+  { path: "/pre-junior/hw4", Component: HW4 }
+];
 
 function Routes() {
-    return (
-        <div>
-            {/*Switch выбирает первый подходящий роут*/}
-            {/*<Switch>*/}
+  return (
+    <div className={classes.Wrapper}>
+      {/*Switch выбирает первый подходящий роут*/}
+      <Switch>
+        {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
+        {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
+        <Route
+          path={"/"}
+          exact
+          render={() => <Redirect to={PATH.PRE_JUNIOR} />}
+        />
+        <Route path={PATH.PRE_JUNIOR} component={PreJunior}>
+          <TaskNav />
+          <div className={classes.TaskWrapper}>
+            <Route
+              path={"/pre-junior"}
+              exact
+              render={() => (
+                <h2 className={classes.hello}>
+                  Hello! This is my first react home tasks!
+                </h2>
+              )}
+            />
 
-            {/*в начале мы попадаем на страницу "/" и переходим сразу на страницу PRE_JUNIOR*/}
-            {/*exact нужен чтоб указать полное совподение (что после "/" ничего не будет)*/}
-            {/*<Route path={"/"} exact render={() => <Redirect to={PRE_JUNIOR}/>}/>*/}
+            {animatedRoutes.map(({ path, Component }) => (
+              <Route key={path} path={path}>
+                {({ match }) => (
+                  <CSSTransition
+                    in={match != null}
+                    timeout={0}
+                    classNames={classes.page}      //"animate__animated animate__fadeInLeft"
+                    mountOnEnter
+                    unmountOnExit
+                  >
+                    <div className={classes.page} >
+                      <Component />
+                    </div>
+                  </CSSTransition>
+                )}
+              </Route>
+            ))}
 
-            {/*<Route path={PRE_JUNIOR} render={() => <PreJunior/>}/>*/}
-                // add routes
+            {/* <Route path={"/pre-junior/hw1"} component={HW1} />
+            <Route path={"/pre-junior/hw2"} component={HW2} />
+            <Route path={"/pre-junior/hw3"} component={HW3} />
+            <Route path={"/pre-junior/hw4"} component={HW4} /> */}
 
-            {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
-            {/*<Route render={() => <Error404/>}/>*/}
+            <Route render={() => <Redirect to={PATH.PRE_JUNIOR} />} />
+          </div>
+        </Route>
 
-            {/*</Switch>*/}
-        </div>
-    );
+        <Route path={PATH.JUNIOR} component={Junior} />
+        <Route path={PATH.JUNIOR_PLUS} component={JuniorPlus} />
+        {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
+        <Route render={() => <Error404 />} />
+      </Switch>
+    </div>
+  );
 }
 
 export default Routes;

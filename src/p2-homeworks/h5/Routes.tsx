@@ -11,6 +11,7 @@ import JuniorPlus from "./pages/JuniorPlus";
 import PreJunior from "./pages/PreJunior";
 import TaskNav from "./pages/TaskNav";
 import { CSSTransition} from "react-transition-group";
+import HW6 from "../h6/HW6";
 
 export const PATH = {
   PRE_JUNIOR: "/pre-junior",
@@ -28,7 +29,8 @@ const animatedRoutes = [
   { path: "/pre-junior/hw1", Component: HW1 },
   { path: "/pre-junior/hw2", Component: HW2 },
   { path: "/pre-junior/hw3", Component: HW3 },
-  { path: "/pre-junior/hw4", Component: HW4 }
+  { path: "/pre-junior/hw4", Component: HW4 },
+  { path: "/pre-junior/hw6", Component: HW6 }
 ];
 
 function Routes() {

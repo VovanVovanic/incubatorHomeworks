@@ -1,3 +1,4 @@
+import classes from "./span.module.css";
 import React, {DetailedHTMLProps, InputHTMLAttributes, HTMLAttributes, useState} from "react";
 import SuperInputText from "../../../h4/common/c1-SuperInputText/SuperInputText";
 
@@ -16,7 +17,7 @@ type SuperEditableSpanType = DefaultInputPropsType & { // и + ещё пропс
 
     spanProps?: DefaultSpanPropsType // пропсы для спана
 };
-
+ 
 const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     {
         autoFocus, // игнорировать изменение этого пропса
@@ -31,22 +32,20 @@ const SuperEditableSpan: React.FC<SuperEditableSpanType> = (
     const {children, onDoubleClick, className, ...restSpanProps} = spanProps || {};
 
     const onEnterCallback = () => {
-        // setEditMode(); // выключить editMode при нажатии Enter
-
+        setEditMode(false); // выключить editMode при нажатии Enter
         onEnter && onEnter();
     };
     const onBlurCallback = (e: React.FocusEvent<HTMLInputElement>) => {
-        // setEditMode(); // выключить editMode при нажатии за пределами инпута
+        setEditMode(false); // выключить editMode при нажатии за пределами инпута
 
         onBlur && onBlur(e);
     };
     const onDoubleClickCallBack = (e: React.MouseEvent<HTMLSpanElement, MouseEvent>) => {
-        // setEditMode(); // включить editMode при двойном клике
-
+         setEditMode(true); // включить editMode при двойном клике
         onDoubleClick && onDoubleClick(e);
     };
 
-    const spanClassName = `${"сделать красивый стиль для спана"} ${className}`;
+    const spanClassName = `badge badge-pill badge-warning ${classes.Span}`;
 
     return (
         <>

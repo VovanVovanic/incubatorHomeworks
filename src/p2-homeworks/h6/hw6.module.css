@@ -1,0 +1,24 @@
+.hw6Wrapper{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 200px;
+ background: #34e89e;
+ background: -webkit-linear-gradient(to right, #0f3443, #34e89e);
+ background: linear-gradient(to right, #0f3443, #34e89e);
+ width: 1200px;
+ height: 100vh;
+}
+.hw6Wrapper h1{
+  margin-bottom: 30px;
+}
+.btnWrapper{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  padding: 3px;
+  background-color: darkcyan;
+  border-radius: 20px;
+}

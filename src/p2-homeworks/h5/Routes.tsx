@@ -12,6 +12,8 @@ import PreJunior from "./pages/PreJunior";
 import TaskNav from "./pages/TaskNav";
 import { CSSTransition} from "react-transition-group";
 import HW6 from "../h6/HW6";
+import HW7 from "../h7/HW7";
+import TaskNavJun from "./pages/TaskNavJun";
 
 export const PATH = {
   PRE_JUNIOR: "/pre-junior",
@@ -31,6 +33,9 @@ const animatedRoutes = [
   { path: "/pre-junior/hw3", Component: HW3 },
   { path: "/pre-junior/hw4", Component: HW4 },
   { path: "/pre-junior/hw6", Component: HW6 }
+];
+const animatedRoutesJunior = [
+  { path: "/junior/hw7", Component: HW7 },
 ];
 
 function Routes() {
@@ -64,28 +69,52 @@ function Routes() {
                   <CSSTransition
                     in={match != null}
                     timeout={0}
-                    classNames={classes.page}      //"animate__animated animate__fadeInLeft"
+                    classNames={classes.page} //"animate__animated animate__fadeInLeft"
                     mountOnEnter
                     unmountOnExit
                   >
-                    <div className={classes.page} >
+                    <div className={classes.page}>
                       <Component />
                     </div>
                   </CSSTransition>
                 )}
               </Route>
             ))}
-
-            {/* <Route path={"/pre-junior/hw1"} component={HW1} />
-            <Route path={"/pre-junior/hw2"} component={HW2} />
-            <Route path={"/pre-junior/hw3"} component={HW3} />
-            <Route path={"/pre-junior/hw4"} component={HW4} /> */}
-
             <Route render={() => <Redirect to={PATH.PRE_JUNIOR} />} />
           </div>
         </Route>
-
-        <Route path={PATH.JUNIOR} component={Junior} />
+        <Route path={PATH.JUNIOR} component={Junior}>
+          <TaskNavJun />
+          <div className={classes.TaskWrapper}>
+            <Route
+              path={"/junior"}
+              exact
+              render={() => (
+                <h2 className={classes.hello}>
+                  Hello! This is my first react home tasks!
+                </h2>
+              )}
+            />
+            {animatedRoutesJunior.map(({ path, Component }) => (
+              <Route key={path} path={path}>
+                {({ match }) => (
+                  <CSSTransition
+                    in={match != null}
+                    timeout={0}
+                    classNames={classes.page} //"animate__animated animate__fadeInLeft"
+                    mountOnEnter
+                    unmountOnExit
+                  >
+                    <div className={classes.page}>
+                      <Component />
+                    </div>
+                  </CSSTransition>
+                )}
+              </Route>
+            ))}
+            <Route render={() => <Redirect to={PATH.JUNIOR} />} />
+          </div>
+        </Route>
         <Route path={PATH.JUNIOR_PLUS} component={JuniorPlus} />
         {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
         <Route render={() => <Error404 />} />

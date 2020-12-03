@@ -1,30 +1,48 @@
+import classes from "./select.module.css";
 import React, {SelectHTMLAttributes, DetailedHTMLProps, ChangeEvent} from "react";
 
 type DefaultSelectPropsType = DetailedHTMLProps<SelectHTMLAttributes<HTMLSelectElement>, HTMLSelectElement>
 
 type SuperSelectPropsType = DefaultSelectPropsType & {
-    options?: any[]
-    onChangeOption?: (option: any) => void
+    options?: Array<string>
+    onChangeOption?: (option: string) => void
 }
 
 const SuperSelect: React.FC<SuperSelectPropsType> = (
     {
         options,
-        onChange, onChangeOption,
+        onChange,
+        onChangeOption,
         ...restProps
     }
 ) => {
-    const mappedOptions: any[] = []; // map options with key
+    const mappedOptions=  options?.map((el, i) => {
+        if (el) {
+            return (
+                <option key={el + i} value={el}>
+                    {el}
+                </option>
+            )
+        }
+        
+    }); // map options with key
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        // onChange, onChangeOption
+        onChangeOption && onChangeOption(e.currentTarget.value) // onChange, onChangeOption
+        
     }
 
     return (
-        <select onChange={onChangeCallback} {...restProps}>
+        <>
+            <label htmlFor='options' className={classes.SelectLabel}>Choose an option</label>
+        <div className = {classes.SelectBox}>
+            <select onChange={onChangeCallback} {...restProps} name='options' className={classes.Select}>
             {mappedOptions}
-        </select>
+        </select>    
+        </div>
+
+        </>
     );
 }
 
-export default SuperSelect;
+export default SuperSelect;  

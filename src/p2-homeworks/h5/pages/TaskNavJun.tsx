@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 const TaskNavJun = () => {
   const navList = [
     { to: "/junior", name: "Main page", exact: true },
-    { to: "/junior/hw7", name: "Task 1", exact: false },
+    { to: "/junior/hw7", name: "Task 7", exact: false },
+    { to: "/junior/hw8", name: "Task 8", exact: false },
   ];
 
   const links = navList.map((link, i) => {

@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/incubatorHomeworks/static/css/main.9bd87aef.chunk.css",
-    "main.js": "/incubatorHomeworks/static/js/main.95ab37ff.chunk.js",
-    "main.js.map": "/incubatorHomeworks/static/js/main.95ab37ff.chunk.js.map",
+    "main.js": "/incubatorHomeworks/static/js/main.e2c0e2c5.chunk.js",
+    "main.js.map": "/incubatorHomeworks/static/js/main.e2c0e2c5.chunk.js.map",
     "runtime-main.js": "/incubatorHomeworks/static/js/runtime-main.81915009.js",
     "runtime-main.js.map": "/incubatorHomeworks/static/js/runtime-main.81915009.js.map",
-    "static/js/2.1e2a6308.chunk.js": "/incubatorHomeworks/static/js/2.1e2a6308.chunk.js",
-    "static/js/2.1e2a6308.chunk.js.map": "/incubatorHomeworks/static/js/2.1e2a6308.chunk.js.map",
+    "static/js/2.e95a8386.chunk.js": "/incubatorHomeworks/static/js/2.e95a8386.chunk.js",
+    "static/js/2.e95a8386.chunk.js.map": "/incubatorHomeworks/static/js/2.e95a8386.chunk.js.map",
     "index.html": "/incubatorHomeworks/index.html",
-    "precache-manifest.7765181d6fdbf19df68c5f069d2b432c.js": "/incubatorHomeworks/precache-manifest.7765181d6fdbf19df68c5f069d2b432c.js",
+    "precache-manifest.57abab88eb5ad81df8b4af7b05e024ea.js": "/incubatorHomeworks/precache-manifest.57abab88eb5ad81df8b4af7b05e024ea.js",
     "service-worker.js": "/incubatorHomeworks/service-worker.js",
     "static/css/main.9bd87aef.chunk.css.map": "/incubatorHomeworks/static/css/main.9bd87aef.chunk.css.map",
-    "static/js/2.1e2a6308.chunk.js.LICENSE.txt": "/incubatorHomeworks/static/js/2.1e2a6308.chunk.js.LICENSE.txt",
+    "static/js/2.e95a8386.chunk.js.LICENSE.txt": "/incubatorHomeworks/static/js/2.e95a8386.chunk.js.LICENSE.txt",
     "static/media/Simon.module.css": "/incubatorHomeworks/static/media/simon.7b3cd18c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.81915009.js",
-    "static/js/2.1e2a6308.chunk.js",
+    "static/js/2.e95a8386.chunk.js",
     "static/css/main.9bd87aef.chunk.css",
-    "static/js/main.95ab37ff.chunk.js"
+    "static/js/main.e2c0e2c5.chunk.js"
   ]
 }

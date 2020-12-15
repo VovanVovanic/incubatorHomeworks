@@ -1,5 +1,5 @@
 import classes from "./clocks.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 import moment from "moment";
 
@@ -12,7 +12,9 @@ function Clock() {
   const [started, setStarted] = useState<boolean>(true);
     console.log(timeId);
     
-
+  useEffect(() => {
+  start()
+},[])
     
   const start = () => {
       setStarted(true)

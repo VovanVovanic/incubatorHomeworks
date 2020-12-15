@@ -7,6 +7,7 @@ const TaskNavJun = () => {
     { to: "/junior", name: "Main page", exact: true },
     { to: "/junior/hw7", name: "Task 7", exact: false },
     { to: "/junior/hw8", name: "Task 8", exact: false },
+    { to: "/junior/hw9", name: "Task 9", exact: false },
   ];
 
   const links = navList.map((link, i) => {

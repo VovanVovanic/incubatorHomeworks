@@ -15,6 +15,7 @@ import HW6 from "../h6/HW6";
 import HW7 from "../h7/HW7";
 import TaskNavJun from "./pages/TaskNavJun";
 import HW8 from "../h8/HW8";
+import HW9 from "../h9/HW9";
 
 export const PATH = {
   PRE_JUNIOR: "/pre-junior",
@@ -37,7 +38,8 @@ const animatedRoutes = [
 ];
 const animatedRoutesJunior = [
   { path: "/junior/hw7", Component: HW7 },
-  {path: "/junior/hw8", Component: HW8 },
+  { path: "/junior/hw8", Component: HW8 },
+  { path: "/junior/hw9", Component: HW9 },
 ];
 
 function Routes() {

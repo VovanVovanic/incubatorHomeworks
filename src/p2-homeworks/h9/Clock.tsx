@@ -1,51 +1,64 @@
-import React, {useState} from "react";
+import classes from "./clocks.module.css";
+import React, { useState } from "react";
 import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
+import moment from "moment";
 
 function Clock() {
-    const [timerId, setTimerId] = useState<number>(0);
-    const [date, setDate] = useState<Date>();
-    const [show, setShow] = useState<boolean>(false);
+    
+    const [time, setTime] = useState<string>('');
+    const[timeId, setTimeId] = useState<number>()
+    const [date, setDate] = useState<string>('');
+  const [show, setShow] = useState<boolean>(false);
+  const [started, setStarted] = useState<boolean>(true);
+    console.log(timeId);
+    
 
-    const stop = () => {
-        // stop
+    
+  const start = () => {
+      setStarted(true)
+        let interval = window.setInterval(() => {
+            let time = moment().format("h:mm:ss a");
+            setTime(time);
+        }, 100)
+       setTimeId(interval)
     }
-    const start = () => {
-        stop();
-        const id: number = window.setInterval(() => {
-            // setDate
-        }, 1000);
-        setTimerId(id);
+    const stop = () => {
+      clearInterval(timeId)
+      setStarted(false)
+        
     }
 
     const onMouseEnter = () => {
-        // show
+        setShow(true)
+        let newDate = moment().format("MMMM Do YYYY");
+        setDate(newDate)
     };
     const onMouseLeave = () => {
-        // close
+        setShow(false)
     };
 
-    const stringTime = "Time"; // fix with date
-    const stringDate = "Date"; // fix with date
+    const stringTime = time; // fix with date
+    const stringDate = date; // fix with date
 
     return (
-        <div>
-            <div
-                onMouseEnter={onMouseEnter}
-                onMouseLeave={onMouseLeave}
-            >
-                {stringTime}
-            </div>
-
-            {show && (
-                <div>
-                    {stringDate}
-                </div>
-            )}
-
-            <SuperButton onClick={start}>start</SuperButton>
-            <SuperButton onClick={stop}>stop</SuperButton>
-
+      <div style={{marginBottom:'50px'}}>
+        <div
+          className={classes.ClocksDisplay}
+          onMouseEnter={onMouseEnter}
+          onMouseLeave={onMouseLeave}
+        >
+          {stringTime}
+          {show && <div className={classes.Date}>{stringDate}</div>}
         </div>
+        <div className={classes.ButtonWrapper}>
+          <SuperButton
+            disabled={started}
+            className={classes.Button}
+            onClick={start}
+          >start</SuperButton>
+          <SuperButton className = {classes.Button}onClick={stop}>stop</SuperButton>
+        </div>
+      </div>
     );
 }
 

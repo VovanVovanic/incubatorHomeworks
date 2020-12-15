@@ -1,18 +1,21 @@
+import classes from "./hw9.module.css";
 import React from "react";
 import Clock from "./Clock";
+import AlternativeClock from "./alternativeClocks/AlternativeClock";
 
 function HW9() {
     return (
-        <div>
+        <div className={classes.HW9Wrapper}>
             <hr/>
-            homeworks 9
+            <h1>Homework 9</h1>
 
             {/*should work (должно работать)*/}
             <Clock/>
 
             <hr/>
             {/*для личного творчества, могу проверить*/}
-            {/*<AlternativeClock/>*/}
+            <h2>My clocks</h2>
+            <AlternativeClock/>
             <hr/>
         </div>
     );

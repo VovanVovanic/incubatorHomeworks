@@ -1,0 +1,24 @@
+.HW11Wrapper {
+  margin: 0 auto;
+  width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+  background-color: lightgreen;
+  height: 100vh;
+}
+
+.SliderWrapper  {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: lightgrey;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.SliderInfo{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}

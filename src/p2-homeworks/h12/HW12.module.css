@@ -63,9 +63,14 @@
 .controls{
     width: 1200px;
     height: 70px;
+    padding: 0 50px;
     background-color: salmon;
+    justify-content: space-between;
     margin-top: 5px;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+
+}
+.controls label{
+    width: 20%;
 }

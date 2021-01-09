@@ -34,7 +34,7 @@ const SuperSelect: React.FC<SuperSelectPropsType> = (
 
     return (
         <>
-            <label htmlFor='options' className={classes.SelectLabel}>Choose an option</label>
+        <label htmlFor='options' className={classes.SelectLabel}>Choose an option</label>
         <div className = {classes.SelectBox}>
             <select onChange={onChangeCallback} {...restProps} name='options' className={classes.Select}>
             {mappedOptions}

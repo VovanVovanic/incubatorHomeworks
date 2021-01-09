@@ -4,6 +4,7 @@
 
 .dark-text {
     color: aliceblue;
+    font-size: 20px;
 }
 
 .red {
@@ -12,12 +13,59 @@
 
 .red-text {
     color: aqua;
+    font-size: 26px;
 }
 
 .some {
     background: lightgreen;
+
 }
 
 .some-text {
     color: darkslateblue;
+        font-size: 18px;
+        font-weight: bold;
+}
+
+.green{
+    background: chartreuse;
+}
+.green-text{
+    color:darkblue;
+    font-size: 32px;
+}
+.navy{
+    background: navy;
+}
+.navy-text{
+    color:yellow;
+    font-size: 42px;
+}
+.orange{
+    background: orange;
+}
+.orange-text{
+    color:purple;
+    font-size: 48px;
+    font-weight: bold;
+}
+.common{
+    margin: 0 auto;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 600px;
+    width: 1200px;
+    padding-top: 100px;
+}
+.controls{
+    width: 1200px;
+    height: 70px;
+    background-color: salmon;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

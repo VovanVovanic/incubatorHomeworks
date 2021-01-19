@@ -14,7 +14,7 @@
     "@types/lorem-ipsum": "^2.0.0",
     "@types/moment": "^2.13.0",
     "@types/node": "^12.0.0",
-    "@types/react": "^16.9.0",
+    "@types/react": "^16.9.52",
     "@types/react-bootstrap": "^0.32.24",
     "@types/react-dom": "^16.9.0",
     "@types/react-redux": "^7.1.15",
@@ -43,6 +43,8 @@
     "react-transition-group": "^4.4.1",
     "reactstrap": "^8.7.1",
     "redux": "^4.0.5",
+    "redux-form": "^8.3.7",
+    "redux-thunk": "^2.3.0",
     "typescript": "^3.9.7",
     "uuid": "^8.3.1"
   },
@@ -77,6 +79,7 @@
     "@storybook/addon-links": "^6.1.11",
     "@storybook/node-logger": "^6.1.11",
     "@storybook/preset-create-react-app": "^3.1.5",
-    "@storybook/react": "^6.1.11"
+    "@storybook/react": "^6.1.11",
+    "@types/redux-form": "^8.3.1"
   }
 }

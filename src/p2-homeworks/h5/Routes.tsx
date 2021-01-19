@@ -19,6 +19,8 @@ import HW9 from "../h9/HW9";
 import HW10 from "../h10/HW10";
 import HW11 from "../h11/HW11";
 import HW12 from "../h12/HW12";
+import HW13 from "../h13/HW13";
+import TaskNavJunPlus from "./pages/TaskNavJunPlus";
 
 export const PATH = {
   PRE_JUNIOR: "/pre-junior",
@@ -46,6 +48,10 @@ const animatedRoutesJunior = [
   { path: "/junior/hw10", Component: HW10 },
   { path: "/junior/hw11", Component: HW11 },
   { path: "/junior/hw12", Component: HW12 },
+];
+const animatedRoutesJuniorPlus = [
+  { path: "/junior-plus/hw13", Component: HW13 },
+
 ];
 
 function Routes() {
@@ -97,7 +103,7 @@ function Routes() {
           <TaskNavJun />
           <div className={classes.TaskWrapper}>
             <Route
-              path={"/junior"}
+              path={"/junior-plus"}
               exact
               render={() => (
                 <h2 className={classes.hello}>
@@ -125,7 +131,38 @@ function Routes() {
             <Route render={() => <Redirect to={PATH.JUNIOR} />} />
           </div>
         </Route>
-        <Route path={PATH.JUNIOR_PLUS} component={JuniorPlus} />
+        <Route path={PATH.JUNIOR_PLUS} component={JuniorPlus}>
+          <TaskNavJunPlus />
+          <div className={classes.TaskWrapper}>
+            <Route
+              path={"/junior"}
+              exact
+              render={() => (
+                <h2 className={classes.hello}>
+                  Hello! This is my first react home tasks!
+                </h2>
+              )}
+            />
+            {animatedRoutesJuniorPlus.map(({ path, Component }) => (
+              <Route key={path} path={path}>
+                {({ match }) => (
+                  <CSSTransition
+                    in={match != null}
+                    timeout={0}
+                    classNames={classes.page} //"animate__animated animate__fadeInLeft"
+                    mountOnEnter
+                    unmountOnExit
+                  >
+                    <div className={classes.page}>
+                      <Component />
+                    </div>
+                  </CSSTransition>
+                )}
+              </Route>
+            ))}
+            <Route render={() => <Redirect to={PATH.JUNIOR_PLUS} />} />
+          </div>
+        </Route>
         {/*у этого роута нет пути, он отрисуется если пользователь захочет попасть на несуществующую страницу*/}
         <Route render={() => <Error404 />} />
       </Switch>
